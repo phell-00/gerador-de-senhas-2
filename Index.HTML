@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERFORGE - Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <main class="container">
+        <!-- LOGO -->
+        <header class="logo-area">
+            <div class="lock">🔒</div>
+            <div class="logo">CYBERFORGE</div>
+        </header>
+
+        <!-- SENHA GERADA -->
+        <section class="password-box">
+            <div class="password-label">SENHA :</div>
+            <div id="password" class="password">zcBLsNGXabce</div>
+            <button id="copyButton" class="copy-button" title="Copiar senha">📋</button>
+        </section>
+
+        <!-- CONFIGURAÇÕES -->
+        <section class="generator">
+            <h1>PERSONALIZE SUA SENHA:</h1>
+            <div class="generator-content">
+                <!-- CARACTERES -->
+                <div class="characters">
+                    <h2>Caracteres:</h2>
+                    <div class="counter">
+                        <button id="minus">−</button>
+                        <span id="length">12</span>
+                        <button id="plus">+</button>
+                    </div>
+                </div>
+
+                <!-- CARACTERÍSTICAS -->
+                <div class="options">
+                    <h2>Características</h2>
+                    <label>
+                        <input type="checkbox" id="uppercase" checked>
+                        <span>Letras maiúsculas</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="lowercase" checked>
+                        <span>Letras minúsculas</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="numbers">
+                        <span>Números</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="symbols">
+                        <span>Símbolos</span>
+                    </label>
+                </div>
+
+                <!-- FORÇA -->
+                <div class="strength">
+                    <h2>Força da senha</h2>
+                    <div class="strength-bar">
+                        <div id="strengthRed" class="strength-part red"></div>
+                        <div id="strengthYellow" class="strength-part yellow"></div>
+                        <div id="strengthGreen" class="strength-part green"></div>
+                    </div>
+                    <div class="strength-info">
+                        <div class="strength-item">
+                            <span class="color red"></span>
+                            <p>Valeu pelo acesso! Nem precisei tentar.</p>
+                        </div>
+                        <div class="strength-item">
+                            <span class="color yellow"></span>
+                            <p>Legal, mas quebro isso em 5 segundos.</p>
+                        </div>
+                        <div class="strength-item">
+                            <span class="color green"></span>
+                            <p>Desisto. Vou hackear o seu vizinho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTÃO GERAR -->
+        <button id="generate" class="generate-button">GERAR NOVA SENHA</button>
+
+        <!-- MENSAGEM -->
+        <div id="message" class="message"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
